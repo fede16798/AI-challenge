@@ -1,0 +1,18 @@
+server:
+  port: 7070
+
+spring:
+  application:
+    name: msvc-chat
+  config:
+    import: optional:configserver:http://localhost:8888
+
+feing:
+  hystrix:
+    enabled: true
+
+responses:
+  answers:
+    weather: "The weather is: %s"
+    time: "The current time is: %s"
+    default: "I don't understand the question."
